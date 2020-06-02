@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Bootstrap</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap/4.4.1/bootstrap.css">
+  <link rel="stylesheet" href="css/variable.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  
+<style>
+    canvas {
+        max-width: 100%
+    }
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <img class="admin-avatar rounded-circle" src="img/admin-avatar.jpg" alt="admin-avatar">
+      <div class="ml-3 admin-info">
+        Alice <br>
+        <i class="fa fa-circle text-green"></i> Online
+      </div>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li class="">
+        <a href="index.html">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+      </li>
+      <li class="">
+        <a href="#layout" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="far fa-gem"></i>
+          Layouts
+        </a>
+        <ul class="collapse list-unstyled" id="layout">
+          <li>
+            <a href="top-navigation.html"><i class="far fa-circle mr-2"></i> Top Navigation</a>
+          </li>
+          <li>
+            <a href="boxed.html"><i class="far fa-circle mr-2"></i> Boxed</a>
+          </li>
+          <li>
+            <a href="fixed.html"><i class="far fa-circle mr-2"></i> Fixed</a>
+          </li>
+          <li>
+            <a href="collapsed-sidebar.html"><i class="far fa-circle mr-2"></i>
+              Collapsed Sidebar</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#ui" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-laptop"></i>
+          UI Elements
+        </a>
+        <ul class="collapse list-unstyled" id="ui">
+          <li>
+            <a href="colors.html"><i class="far fa-circle mr-2"></i> Colors</a>
+          </li>
+          <li>
+            <a href="typography.html"><i class="far fa-circle mr-2"></i> typography</a>
+          </li>
+          <li>
+            <a href="icons.html"><i class="far fa-circle mr-2"></i> Icons</a>
+          </li>
+          <li>
+            <a href="buttons.html"><i class="far fa-circle mr-2"></i> Buttons</a>
+          </li>
+          <li>
+            <a href="notifications.html"><i class="far fa-circle mr-2"></i> Notifications</a>
+          </li>
+          <li>
+            <a href="modals.html"><i class="far fa-circle mr-2"></i> Modals</a>
+          </li>
+          <li>
+            <a href="progress-bars.html"><i class="far fa-circle mr-2"></i> Progress Bars</a>
+          </li>
+          <li>
+            <a href="tabs.html"><i class="far fa-circle mr-2"></i> Tabs</a>
+          </li>
+          <li>
+            <a href="sliders.html"><i class="far fa-circle mr-2"></i> Sliders</a>
+          </li>
+          <li>
+            <a href="tree-views.html"><i class="far fa-circle mr-2"></i> Tree Views</a>
+          </li>
+          <li>
+            <a href="netables.html"><i class="far fa-circle mr-2"></i> Nestables</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#form" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-edit"></i>
+          Forms
+        </a>
+        <ul class="collapse list-unstyled" id="form">
+          <li>
+            <a href="form.html"><i class="far fa-circle mr-2"></i> Forms Elements</a>
+          </li>
+          <li>
+            <a href="form-layout.html"><i class="far fa-circle mr-2"></i> Forms Layouts</a>
+          </li>
+          <li>
+            <a href="form-wizard.html"><i class="far fa-circle mr-2"></i> Forms Wizard</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="cards.html">
+          <i class="fas fa-chart-line"></i>
+          Cards
+        </a>
+      </li>
+      <li>
+        <a href="widgets.html">
+          <i class="fa fa-flask"></i>
+          Widgets
+        </a>
+      </li>
+      <li>
+        <a href="#map" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-map-marked-alt"></i>
+          Maps
+        </a>
+        <ul class="collapse list-unstyled" id="map">
+          <li>
+            <a href="map-googles.html"><i class="far fa-circle mr-2"></i> Google Maps</a>
+          </li>
+          <li>
+            <a href="map-vector.html"><i class="far fa-circle mr-2"></i> Vector Maps</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#chart" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fas fa-chart-line"></i>
+          Charts
+        </a>
+        <ul class="collapse list-unstyled" id="chart">
+          <li>
+            <a href="chart-js.html"><i class="far fa-circle mr-2"></i> Chart JS</a>
+          </li>
+          <li>
+            <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Google Chart</a>
+          </li>
+          <li>
+            <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Inline Charts</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fas fa-table"></i>
+          Tables
+        </a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+          <li>
+            <a href="basic_tables.html"><i class="far fa-circle mr-2"></i> Basic Tables</a>
+          </li>
+          <li>
+            <a href="data-tables.html"><i class="far fa-circle mr-2"></i> Data Tables</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#extra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-dungeon"></i>
+          Extra
+        </a>
+        <ul class="collapse list-unstyled" id="extra">
+          <li>
+            <a href="extra-invoice.html"><i class="far fa-circle mr-2"></i> Invoice</a>
+          </li>
+          <li>
+            <a href="extra-404.html"><i class="far fa-circle mr-2"></i> 404 Page</a>
+          </li>
+          <li>
+            <a href="extra-500.html"><i class="far fa-circle mr-2"></i> 500 Page</a>
+          </li>
+          <li>
+            <a href="extra-blank.html"><i class="far fa-circle mr-2"></i> Blank Page</a>
+          </li>
+          <li>
+            <a href="extra-login.html"><i class="far fa-circle mr-2"></i> Login</a>
+          </li>
+          <li>
+            <a href="extra-register.html"><i class="far fa-circle mr-2"></i> Register</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#menus" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-sitemap"></i>
+          Menu
+        </a>
+        <ul class="collapse list-unstyled" id="menus">
+          <li>
+            <a href="menu-lv1.html"><i class="far fa-circle mr-2"></i> Level 1</a>
+          </li>
+          <li>
+            <a href="menu-lv2.html"><i class="far fa-circle mr-2"></i> Level 2 & Sub</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!--    Page Content-->
+  <div id="content" class="gray-bg">
+    <!--        Top Header-->
+    <nav class="navbar navbar-light bg-light navbar-static-top">
+      <div class="navbar-left">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+        </button>
+      </div>
+      <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-envelope"></i>  <span class="badge badge-warning">16</span>
+          </a>
+          <ul class="dropdown-menu dropdown-messages">
+            <li>
+              <div class="dropdown-messages-box">
+                <div class="message-avatar-box">
+                  <img alt="image" class="message-avatar rounded-circle" src="img/admin-avatar.jpg">
+                </div>
+                <div class="message-content">
+                  <small class="float-right">46h ago</small>
+                  <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                  <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-messages-footer">
+              <a href="">Read All Messages</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell"></i>  <span class="badge badge-info">8</span>
+          </a>
+          <ul class="dropdown-menu dropdown-alerts">
+            <li>
+              <a href="mailbox.html" class="dropdown-item">
+                <div>
+                  <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                  <span class="float-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a href="profile.html" class="dropdown-item">
+                <div>
+                  <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                  <span class="float-right text-muted small">12 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a href="grid_options.html" class="dropdown-item">
+                <div>
+                  <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                  <span class="float-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <div class="text-center link-block">
+                <a href="notifications.html" class="dropdown-item">
+                  <strong>See All Alerts</strong>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+
+        <li>
+          <a href="">
+            <i class="fa fa-sign-out-alt"></i> Log out
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--Main Content-->
+    <div class="wrapper-content">
+      
+<h1>Chart JS</h1>
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Bar Chart</div>
+            <div class="card-body">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Line Chart</div>
+            <div class="card-body">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Radar Chart</div>
+            <div class="card-body">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Pie Chart</div>
+            <div class="card-body">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">Combo Chart</div>
+            <div class="card-body">
+                <canvas id="comboChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
+<script src="js/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="js/bootstrap/4.4.1/bootstrap.min.js"></script>
+<script src="js/font-awesome/5.12.1/all.min.js"></script>
+<script src="js/chart-js/2.9.3/util.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/chart-js/2.9.3/chart-2.9.3.min.js"></script>
+<script type="text/javascript">
+    // ChartJS data
+    let MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let color = Chart.helpers.color;
+    let utils = Samples.utils;
+    function randomScalingFactor() {
+        return Math.round(Math.random() * 100);
+    };
+
+    function generateLabels() {
+        return utils.months({count: inputs.count});
+    }
+
+    let presets = window.chartColors;
+    let inputs = {
+        min: 8,
+        max: 16,
+        count: 8,
+        decimals: 2,
+        continuity: 1
+    };
+    utils.srand(42);
+
+    function generateData() {
+        // radar chart doesn't support stacked values, let's do it manually
+        var values = utils.numbers(inputs);
+        inputs.from = values;
+        return values;
+    }
+
+    // barChart
+    let barChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Dataset 1',
+            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            borderWidth: 1,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            label: 'Dataset 2',
+            backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.blue,
+            borderWidth: 1,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }]
+
+    };
+    // lineChart
+    let lineChartConfig = {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: window.chartColors.red,
+                borderColor: window.chartColors.red,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                fill: false,
+            }, {
+                label: 'My Second dataset',
+                fill: false,
+                backgroundColor: window.chartColors.blue,
+                borderColor: window.chartColors.blue,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: false,
+                text: 'Chart.js Line Chart'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // radarChart
+    let radarChartData = {
+        labels: generateLabels(),
+        datasets: [{
+            backgroundColor: utils.transparentize(presets.red),
+            borderColor: presets.red,
+            data: generateData(),
+            label: 'D0'
+        }, {
+            backgroundColor: utils.transparentize(presets.orange),
+            borderColor: presets.orange,
+            data: generateData(),
+            hidden: true,
+            label: 'D1',
+            fill: '-1'
+        }, {
+            backgroundColor: utils.transparentize(presets.yellow),
+            borderColor: presets.yellow,
+            data: generateData(),
+            label: 'D2',
+            fill: 1
+        }, {
+            backgroundColor: utils.transparentize(presets.green),
+            borderColor: presets.green,
+            data: generateData(),
+            label: 'D3',
+            fill: false
+        }, {
+            backgroundColor: utils.transparentize(presets.blue),
+            borderColor: presets.blue,
+            data: generateData(),
+            label: 'D4',
+            fill: '-1'
+        }, {
+            backgroundColor: utils.transparentize(presets.purple),
+            borderColor: presets.purple,
+            data: generateData(),
+            label: 'D5',
+            fill: '-1'
+        }]
+    };
+    let radarChartOptions = {
+        maintainAspectRatio: true,
+        spanGaps: false,
+        elements: {
+            line: {
+                tension: 0.000001
+            }
+        },
+        plugins: {
+            filler: {
+                propagate: false
+            },
+            'samples-filler-analyser': {
+                target: 'chart-analyser'
+            }
+        }
+    };
+    // pieChart
+    let pieChartConfig = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Red',
+                'Orange',
+                'Yellow',
+                'Green',
+                'Blue'
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+    // comboChart
+    var comboChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            type: 'line',
+            label: 'Line 1',
+            borderColor: window.chartColors.yellow,
+            borderWidth: 2,
+            fill: false,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        },{
+            type: 'line',
+            label: 'Line 2',
+            borderColor: window.chartColors.green,
+            borderWidth: 2,
+            fill: false,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            type: 'bar',
+            label: 'Dataset 1',
+            backgroundColor: window.chartColors.red,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            type: 'bar',
+            label: 'Dataset 2',
+            backgroundColor: window.chartColors.blue,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            type: 'bar',
+            label: 'Dataset 3',
+            backgroundColor: window.chartColors.orange,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }
+        ]
+    };
+    window.onload = function() {
+        let barChart = document.getElementById('barChart').getContext('2d');
+        window.myBar = new Chart(barChart, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: false,
+                    text: 'Bar Chart'
+                }
+            }
+        });
+
+        let lineChart = document.getElementById('lineChart').getContext('2d');
+        window.lineChart = new Chart(lineChart, lineChartConfig);
+
+        let radarChart = new Chart('radarChart', {
+            type: 'radar',
+            data: radarChartData,
+            options: radarChartOptions
+        });
+
+        let pieChart = document.getElementById('pieChart').getContext('2d');
+        window.myPie = new Chart(pieChart, pieChartConfig);
+
+        let comboChart = document.getElementById('comboChart').getContext('2d');
+        window.myMixedChart = new Chart(comboChart, {
+            type: 'bar',
+            data: comboChartData,
+            options: {
+                responsive: true,
+                title: {
+                    display: false,
+                    text: 'Chart.js Combo Bar Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                    }],
+                    yAxes: [{
+                        stacked: true
+                    }]
+                }
+            }
+        });
+
+    };
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+    });
+  });
+</script>
+</html>

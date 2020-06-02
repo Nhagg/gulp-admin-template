@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Bootstrap</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap/4.4.1/bootstrap.css">
+    <link rel="stylesheet" href="../css/variable.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img class="admin-avatar rounded-circle" src="../img/admin-avatar.jpg" alt="admin-avatar">
+            <div class="ml-3 admin-info">
+                Alice <br>
+                <i class="fa fa-circle text-green"></i> Online
+            </div>
+        </div>
+        <ul class="list-unstyled components">
+            <li class="">
+                <a href="../index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="#layout" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="far fa-gem"></i>
+                    <span>Layouts</span>
+                </a>
+                <ul class="collapse list-unstyled" id="layout">
+                    <li>
+                        <a href="top-navigation.html">
+                            <i class="far fa-circle mr-2"></i>
+                            <span>Top Navigation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="boxed.html"><i class="far fa-circle mr-2"></i> Boxed</a>
+                    </li>
+                    <li>
+                        <a href="fixed.html"><i class="far fa-circle mr-2"></i> Fixed</a>
+                    </li>
+                    <li>
+                        <a href="collapsed-sidebar.html"><i class="far fa-circle mr-2"></i>
+                            Collapsed Sidebar</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#ui" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-laptop"></i>
+                    UI Elements
+                </a>
+                <ul class="collapse list-unstyled" id="ui">
+                    <li>
+                        <a href="colors.html"><i class="far fa-circle mr-2"></i> Colors</a>
+                    </li>
+                    <li>
+                        <a href="typography.html"><i class="far fa-circle mr-2"></i> Typography</a>
+                    </li>
+                    <li>
+                        <a href="icons.html"><i class="far fa-circle mr-2"></i> Icons</a>
+                    </li>
+                    <li>
+                        <a href="buttons.html"><i class="far fa-circle mr-2"></i> Buttons</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html"><i class="far fa-circle mr-2"></i> Notifications</a>
+                    </li>
+                    <li>
+                        <a href="modals.html"><i class="far fa-circle mr-2"></i> Modals</a>
+                    </li>
+                    <li>
+                        <a href="progress-bars.html"><i class="far fa-circle mr-2"></i> Progress Bars</a>
+                    </li>
+                    <li>
+                        <a href="tabs.html"><i class="far fa-circle mr-2"></i> Tabs</a>
+                    </li>
+                    <li>
+                        <a href="sliders.html"><i class="far fa-circle mr-2"></i> Sliders</a>
+                    </li>
+                    <li>
+                        <a href="tree-views.html"><i class="far fa-circle mr-2"></i> Tree Views</a>
+                    </li>
+                    <li>
+                        <a href="netables.html"><i class="far fa-circle mr-2"></i> Nestables</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#form" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-edit"></i>
+                    Forms
+                </a>
+                <ul class="collapse list-unstyled" id="form">
+                    <li>
+                        <a href="form.html"><i class="far fa-circle mr-2"></i> Forms Elements</a>
+                    </li>
+                    <li>
+                        <a href="form-layout.html"><i class="far fa-circle mr-2"></i> Forms Layouts</a>
+                    </li>
+                    <li>
+                        <a href="form-wizard.html"><i class="far fa-circle mr-2"></i> Forms Wizard</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="cards.html">
+                    <i class="fas fa-chart-line"></i>
+                    Cards
+                </a>
+            </li>
+            <li>
+                <a href="widgets.html">
+                    <i class="fa fa-flask"></i>
+                    Widgets
+                </a>
+            </li>
+            <li>
+                <a href="#map" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-map-marked-alt"></i>
+                    Maps
+                </a>
+                <ul class="collapse list-unstyled" id="map">
+                    <li>
+                        <a href="map-googles.html"><i class="far fa-circle mr-2"></i> Google Maps</a>
+                    </li>
+                    <li>
+                        <a href="map-vector.html"><i class="far fa-circle mr-2"></i> Vector Maps</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chart" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-chart-line"></i>
+                    Charts
+                </a>
+                <ul class="collapse list-unstyled" id="chart">
+                    <li>
+                        <a href="chart-js.html"><i class="far fa-circle mr-2"></i> Chart JS</a>
+                    </li>
+                    <li>
+                        <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Google Chart</a>
+                    </li>
+                    <li>
+                        <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Inline Charts</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-table"></i>
+                    Tables
+                </a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="basic_tables.html"><i class="far fa-circle mr-2"></i> Basic Tables</a>
+                    </li>
+                    <li>
+                        <a href="data-tables.html"><i class="far fa-circle mr-2"></i> Data Tables</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#extra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-dungeon"></i>
+                    Extra
+                </a>
+                <ul class="collapse list-unstyled" id="extra">
+                    <li>
+                        <a href="extra-invoice.html"><i class="far fa-circle mr-2"></i> Invoice</a>
+                    </li>
+                    <li>
+                        <a href="extra-404.html"><i class="far fa-circle mr-2"></i> 404 Page</a>
+                    </li>
+                    <li>
+                        <a href="extra-500.html"><i class="far fa-circle mr-2"></i> 500 Page</a>
+                    </li>
+                    <li>
+                        <a href="extra-blank.html"><i class="far fa-circle mr-2"></i> Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="extra-login.html"><i class="far fa-circle mr-2"></i> Login</a>
+                    </li>
+                    <li>
+                        <a href="extra-register.html"><i class="far fa-circle mr-2"></i> Register</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menus" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-sitemap"></i>
+                    Menu
+                </a>
+                <ul class="collapse list-unstyled" id="menus">
+                    <li>
+                        <a href="menu-lv1.html"><i class="far fa-circle mr-2"></i> Level 1</a>
+                    </li>
+                    <li>
+                        <a href="menu-lv2.html"><i class="far fa-circle mr-2"></i> Level 2 & Sub</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--    Page Content-->
+    <div id="content" class="gray-bg">
+        <!--        Top Header-->
+        <nav class="navbar navbar-light bg-light navbar-static-top">
+            <div class="navbar-left">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                </button>
+            </div>
+        </nav>
+        <!--Main Content-->
+        <div class="wrapper-content">
+            <h1> Notifications </h1>
+            <p>
+                Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight required contextual classes (e.g., .alert-success)
+            </p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Examples</h3>
+                            <hr>
+                            <div class="alert alert-primary" role="alert">
+                                A simple primary alert—check it out!
+                            </div>
+                            <div class="alert alert-secondary" role="alert">
+                                A simple secondary alert—check it out!
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                A simple success alert—check it out!
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                A simple danger alert—check it out!
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                A simple warning alert—check it out!
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                                A simple info alert—check it out!
+                            </div>
+                            <div class="alert alert-light" role="alert">
+                                A simple light alert—check it out!
+                            </div>
+                            <div class="alert alert-dark" role="alert">
+                                A simple dark alert—check it out!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3>Link color</h3>
+                            <hr>
+                            <div class="alert alert-primary" role="alert">
+                                A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-secondary" role="alert">
+                                A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                                A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-light" role="alert">
+                                A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-dark" role="alert">
+                                A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3>Additional content</h3>
+                            <hr>
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Well done!</h4>
+                                <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                <hr>
+                                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3>Dismissing</h3>
+                            <hr>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="../js/bootstrap/4.4.1/bootstrap.min.js"></script>
+<script src="../js/font-awesome/5.12.1/all.min.js"></script>
+<script src="../js/app.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    });
+</script>
+</html>

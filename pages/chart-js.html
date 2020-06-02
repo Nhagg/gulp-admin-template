@@ -1,0 +1,414 @@
+<!-- build:css -->
+<style>
+    canvas {
+        max-width: 100%
+    }
+</style>
+<!-- /build:css -->
+
+<!-- build:content -->
+<h1>Chart JS</h1>
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Bar Chart</div>
+            <div class="card-body">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Line Chart</div>
+            <div class="card-body">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Radar Chart</div>
+            <div class="card-body">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-header">Pie Chart</div>
+            <div class="card-body">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">Combo Chart</div>
+            <div class="card-body">
+                <canvas id="comboChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /build:content -->
+
+<!--build:js-->
+<script src="js/chart-js/2.9.3/chart-2.9.3.min.js"></script>
+<script type="text/javascript">
+    // ChartJS data
+    let MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let color = Chart.helpers.color;
+    let utils = Samples.utils;
+    function randomScalingFactor() {
+        return Math.round(Math.random() * 100);
+    };
+
+    function generateLabels() {
+        return utils.months({count: inputs.count});
+    }
+
+    let presets = window.chartColors;
+    let inputs = {
+        min: 8,
+        max: 16,
+        count: 8,
+        decimals: 2,
+        continuity: 1
+    };
+    utils.srand(42);
+
+    function generateData() {
+        // radar chart doesn't support stacked values, let's do it manually
+        var values = utils.numbers(inputs);
+        inputs.from = values;
+        return values;
+    }
+
+    // barChart
+    let barChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Dataset 1',
+            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            borderWidth: 1,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            label: 'Dataset 2',
+            backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.blue,
+            borderWidth: 1,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }]
+
+    };
+    // lineChart
+    let lineChartConfig = {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: window.chartColors.red,
+                borderColor: window.chartColors.red,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                fill: false,
+            }, {
+                label: 'My Second dataset',
+                fill: false,
+                backgroundColor: window.chartColors.blue,
+                borderColor: window.chartColors.blue,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: false,
+                text: 'Chart.js Line Chart'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            }
+        }
+    };
+    // radarChart
+    let radarChartData = {
+        labels: generateLabels(),
+        datasets: [{
+            backgroundColor: utils.transparentize(presets.red),
+            borderColor: presets.red,
+            data: generateData(),
+            label: 'D0'
+        }, {
+            backgroundColor: utils.transparentize(presets.orange),
+            borderColor: presets.orange,
+            data: generateData(),
+            hidden: true,
+            label: 'D1',
+            fill: '-1'
+        }, {
+            backgroundColor: utils.transparentize(presets.yellow),
+            borderColor: presets.yellow,
+            data: generateData(),
+            label: 'D2',
+            fill: 1
+        }, {
+            backgroundColor: utils.transparentize(presets.green),
+            borderColor: presets.green,
+            data: generateData(),
+            label: 'D3',
+            fill: false
+        }, {
+            backgroundColor: utils.transparentize(presets.blue),
+            borderColor: presets.blue,
+            data: generateData(),
+            label: 'D4',
+            fill: '-1'
+        }, {
+            backgroundColor: utils.transparentize(presets.purple),
+            borderColor: presets.purple,
+            data: generateData(),
+            label: 'D5',
+            fill: '-1'
+        }]
+    };
+    let radarChartOptions = {
+        maintainAspectRatio: true,
+        spanGaps: false,
+        elements: {
+            line: {
+                tension: 0.000001
+            }
+        },
+        plugins: {
+            filler: {
+                propagate: false
+            },
+            'samples-filler-analyser': {
+                target: 'chart-analyser'
+            }
+        }
+    };
+    // pieChart
+    let pieChartConfig = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.orange,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    window.chartColors.blue,
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                'Red',
+                'Orange',
+                'Yellow',
+                'Green',
+                'Blue'
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+    // comboChart
+    var comboChartData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            type: 'line',
+            label: 'Line 1',
+            borderColor: window.chartColors.yellow,
+            borderWidth: 2,
+            fill: false,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        },{
+            type: 'line',
+            label: 'Line 2',
+            borderColor: window.chartColors.green,
+            borderWidth: 2,
+            fill: false,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            type: 'bar',
+            label: 'Dataset 1',
+            backgroundColor: window.chartColors.red,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            type: 'bar',
+            label: 'Dataset 2',
+            backgroundColor: window.chartColors.blue,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }, {
+            type: 'bar',
+            label: 'Dataset 3',
+            backgroundColor: window.chartColors.orange,
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ]
+        }
+        ]
+    };
+    window.onload = function() {
+        let barChart = document.getElementById('barChart').getContext('2d');
+        window.myBar = new Chart(barChart, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: false,
+                    text: 'Bar Chart'
+                }
+            }
+        });
+
+        let lineChart = document.getElementById('lineChart').getContext('2d');
+        window.lineChart = new Chart(lineChart, lineChartConfig);
+
+        let radarChart = new Chart('radarChart', {
+            type: 'radar',
+            data: radarChartData,
+            options: radarChartOptions
+        });
+
+        let pieChart = document.getElementById('pieChart').getContext('2d');
+        window.myPie = new Chart(pieChart, pieChartConfig);
+
+        let comboChart = document.getElementById('comboChart').getContext('2d');
+        window.myMixedChart = new Chart(comboChart, {
+            type: 'bar',
+            data: comboChartData,
+            options: {
+                responsive: true,
+                title: {
+                    display: false,
+                    text: 'Chart.js Combo Bar Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                    }],
+                    yAxes: [{
+                        stacked: true
+                    }]
+                }
+            }
+        });
+
+    };
+</script>
+<!--/build:js-->

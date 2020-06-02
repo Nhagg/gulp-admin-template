@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Bootstrap</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap/4.4.1/bootstrap.css">
+  <link rel="stylesheet" href="css/variable.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <!-- build:css -->
+</head>
+<body>
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <img class="admin-avatar rounded-circle" src="img/admin-avatar.jpg" alt="admin-avatar">
+      <div class="ml-3 admin-info">
+        Alice <br>
+        <i class="fa fa-circle text-green"></i> Online
+      </div>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li class="">
+        <a href="index.html">
+          <i class="fas fa-home"></i>
+          Home
+        </a>
+      </li>
+      <li class="">
+        <a href="#layout" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="far fa-gem"></i>
+          Layouts
+        </a>
+        <ul class="collapse list-unstyled" id="layout">
+          <li>
+            <a href="top-navigation.html"><i class="far fa-circle mr-2"></i> Top Navigation</a>
+          </li>
+          <li>
+            <a href="boxed.html"><i class="far fa-circle mr-2"></i> Boxed</a>
+          </li>
+          <li>
+            <a href="fixed.html"><i class="far fa-circle mr-2"></i> Fixed</a>
+          </li>
+          <li>
+            <a href="collapsed-sidebar.html"><i class="far fa-circle mr-2"></i>
+              Collapsed Sidebar</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#ui" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-laptop"></i>
+          UI Elements
+        </a>
+        <ul class="collapse list-unstyled" id="ui">
+          <li>
+            <a href="colors.html"><i class="far fa-circle mr-2"></i> Colors</a>
+          </li>
+          <li>
+            <a href="typography.html"><i class="far fa-circle mr-2"></i> typography</a>
+          </li>
+          <li>
+            <a href="icons.html"><i class="far fa-circle mr-2"></i> Icons</a>
+          </li>
+          <li>
+            <a href="buttons.html"><i class="far fa-circle mr-2"></i> Buttons</a>
+          </li>
+          <li>
+            <a href="notifications.html"><i class="far fa-circle mr-2"></i> Notifications</a>
+          </li>
+          <li>
+            <a href="modals.html"><i class="far fa-circle mr-2"></i> Modals</a>
+          </li>
+          <li>
+            <a href="progress-bars.html"><i class="far fa-circle mr-2"></i> Progress Bars</a>
+          </li>
+          <li>
+            <a href="tabs.html"><i class="far fa-circle mr-2"></i> Tabs</a>
+          </li>
+          <li>
+            <a href="sliders.html"><i class="far fa-circle mr-2"></i> Sliders</a>
+          </li>
+          <li>
+            <a href="tree-views.html"><i class="far fa-circle mr-2"></i> Tree Views</a>
+          </li>
+          <li>
+            <a href="netables.html"><i class="far fa-circle mr-2"></i> Nestables</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#form" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-edit"></i>
+          Forms
+        </a>
+        <ul class="collapse list-unstyled" id="form">
+          <li>
+            <a href="form.html"><i class="far fa-circle mr-2"></i> Forms Elements</a>
+          </li>
+          <li>
+            <a href="form-layout.html"><i class="far fa-circle mr-2"></i> Forms Layouts</a>
+          </li>
+          <li>
+            <a href="form-wizard.html"><i class="far fa-circle mr-2"></i> Forms Wizard</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="cards.html">
+          <i class="fas fa-chart-line"></i>
+          Cards
+        </a>
+      </li>
+      <li>
+        <a href="widgets.html">
+          <i class="fa fa-flask"></i>
+          Widgets
+        </a>
+      </li>
+      <li>
+        <a href="#map" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-map-marked-alt"></i>
+          Maps
+        </a>
+        <ul class="collapse list-unstyled" id="map">
+          <li>
+            <a href="map-googles.html"><i class="far fa-circle mr-2"></i> Google Maps</a>
+          </li>
+          <li>
+            <a href="map-vector.html"><i class="far fa-circle mr-2"></i> Vector Maps</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#chart" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fas fa-chart-line"></i>
+          Charts
+        </a>
+        <ul class="collapse list-unstyled" id="chart">
+          <li>
+            <a href="chart-js.html"><i class="far fa-circle mr-2"></i> Chart JS</a>
+          </li>
+          <li>
+            <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Google Chart</a>
+          </li>
+          <li>
+            <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Inline Charts</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fas fa-table"></i>
+          Tables
+        </a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+          <li>
+            <a href="basic_tables.html"><i class="far fa-circle mr-2"></i> Basic Tables</a>
+          </li>
+          <li>
+            <a href="data-tables.html"><i class="far fa-circle mr-2"></i> Data Tables</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#extra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-dungeon"></i>
+          Extra
+        </a>
+        <ul class="collapse list-unstyled" id="extra">
+          <li>
+            <a href="extra-invoice.html"><i class="far fa-circle mr-2"></i> Invoice</a>
+          </li>
+          <li>
+            <a href="extra-404.html"><i class="far fa-circle mr-2"></i> 404 Page</a>
+          </li>
+          <li>
+            <a href="extra-500.html"><i class="far fa-circle mr-2"></i> 500 Page</a>
+          </li>
+          <li>
+            <a href="extra-blank.html"><i class="far fa-circle mr-2"></i> Blank Page</a>
+          </li>
+          <li>
+            <a href="extra-login.html"><i class="far fa-circle mr-2"></i> Login</a>
+          </li>
+          <li>
+            <a href="extra-register.html"><i class="far fa-circle mr-2"></i> Register</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#menus" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i class="fa fa-sitemap"></i>
+          Menu
+        </a>
+        <ul class="collapse list-unstyled" id="menus">
+          <li>
+            <a href="menu-lv1.html"><i class="far fa-circle mr-2"></i> Level 1</a>
+          </li>
+          <li>
+            <a href="menu-lv2.html"><i class="far fa-circle mr-2"></i> Level 2 & Sub</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!--    Page Content-->
+  <div id="content" class="gray-bg">
+    <!--        Top Header-->
+    <nav class="navbar navbar-light bg-light navbar-static-top">
+      <div class="navbar-left">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+        </button>
+      </div>
+      <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-envelope"></i>  <span class="badge badge-warning">16</span>
+          </a>
+          <ul class="dropdown-menu dropdown-messages">
+            <li>
+              <div class="dropdown-messages-box">
+                <div class="message-avatar-box">
+                  <img alt="image" class="message-avatar rounded-circle" src="img/admin-avatar.jpg">
+                </div>
+                <div class="message-content">
+                  <small class="float-right">46h ago</small>
+                  <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                  <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li class="dropdown-messages-footer">
+              <a href="">Read All Messages</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+            <i class="fa fa-bell"></i>  <span class="badge badge-info">8</span>
+          </a>
+          <ul class="dropdown-menu dropdown-alerts">
+            <li>
+              <a href="mailbox.html" class="dropdown-item">
+                <div>
+                  <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                  <span class="float-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a href="profile.html" class="dropdown-item">
+                <div>
+                  <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                  <span class="float-right text-muted small">12 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a href="grid_options.html" class="dropdown-item">
+                <div>
+                  <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                  <span class="float-right text-muted small">4 minutes ago</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <div class="text-center link-block">
+                <a href="notifications.html" class="dropdown-item">
+                  <strong>See All Alerts</strong>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+
+        <li>
+          <a href="">
+            <i class="fa fa-sign-out-alt"></i> Log out
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--Main Content-->
+    <div class="wrapper-content">
+      
+<h2> Page Colors </h2>
+<div class="row">
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-primary">
+                    <span class="float-right">0</span>
+                    <p> Primary color - Pages purple</p>
+                    <p>bg-primary</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 pt-3 pb-3 text-right  bg-primary-lighter">
+                    lighter
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-primary-light">
+                    light
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right  bg-primary-dark">
+                    dark
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right  bg-primary-darker">
+                    darker
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-complete">
+                    <span class="float-right">0</span>
+                    <p> Complete color - Pages blue</p>
+                    <p>bg-complete</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-complete-lighter">
+                    lighter
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-complete-light">
+                    light
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-complete-dark">
+                    dark
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-complete-darker">
+                    darker
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-success">
+                    <span class="float-right">0</span>
+                    <p> Success color - Pages green</p>
+                    <p>bg-success</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-success-lighter">
+                    lighter
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-success-light">
+                    light
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-success-dark">
+                    dark
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-success-darker">
+                    darker
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-warning">
+                    <span class="float-right">0</span>
+                    <p> Warning color - Pages yellow</p>
+                    <p>bg-warning</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-warning-lighter">
+                    lighter
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-warning-light">
+                    light
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-warning-dark">
+                    dark
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-warning-darker">
+                    darker
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-danger">
+                    <span class="float-right">0</span>
+                    <p> Danger color - Pages red</p>
+                    <p>bg-danger</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-danger-lighter">
+                    lighter
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-danger-light">
+                    light
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-danger-dark">
+                    dark
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-danger-darker">
+                    darker
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-info">
+                    <span class="float-right">0</span>
+                    <p> Info color - Pages gray</p>
+                    <p>bg-info</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-info-lighter">
+                    lighter
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-info-light">
+                    light
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-info-dark">
+                    dark
+                </div>
+                <div class="col-sm-3 pt-3 pb-3 text-right bg-info-darker">
+                    darker
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-4">
+        <div class="p-3">
+            <div class="row">
+                <div class="col pt-3 bg-menu">
+                    <span class="float-right">0</span>
+                    <p> Menu color - Pages gray</p>
+                    <p>bg-complete</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pt-3 pb-3 text-right bg-menu-light">
+                    light
+                </div>
+                <div class="col pt-3 pb-3 text-right bg-menu-dark">
+                    dark
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2>Neutral color</h2>
+<div class="row">
+    <div class="col-md-8">
+        <p>The neutral color palette is made with two contrasting colors on either side, usually white and black. The rest of the colors in the middle are auto-generated to be used for various UI elements and surfaces, for example, color-contrast-lower is used for background and color-contrast-high is used for regular paragraphs.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col bg-contrast-lowest ">
+        <div class="pt-3 pb-3">
+            <p>color-contrast-lowest</p>
+            <p>Background</p>
+        </div>
+    </div>
+    <div class="col bg-contrast-lower ">
+        <div class="pt-3 pb-3">
+            <p>color-contrast-lower</p>
+            <p>Background</p>
+        </div>
+    </div>
+    <div class="col bg-contrast-low">
+        <div class=" pt-3 pb-3">
+            <p>color-contrast-low</p>
+            <p>Background</p>
+        </div>
+    </div>
+    <div class="col bg-contrast-medium">
+        <div class=" pt-3 pb-3">
+            <p>bg-contrast-medium</p>
+            <p>Background</p>
+        </div>
+    </div>
+    <div class="col bg-contrast-high">
+        <div class=" pt-3 pb-3">
+            <p>color-contrast-high</p>
+            <p>Background</p>
+        </div>
+    </div>
+    <div class="col bg-contrast-higher">
+        <div class=" pt-3 pb-3">
+            <p>bg-contrast-higher</p>
+            <p>Background</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
+<script src="js/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="js/bootstrap/4.4.1/bootstrap.min.js"></script>
+<script src="js/font-awesome/5.12.1/all.min.js"></script>
+<script src="js/chart-js/2.9.3/util.js"></script>
+<script src="js/app.js"></script>
+<!-- build:js -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+    });
+  });
+</script>
+</html>

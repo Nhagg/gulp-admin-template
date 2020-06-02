@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Bootstrap</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap/4.4.1/bootstrap.css">
+    <link rel="stylesheet" href="../css/variable.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/font-awesome/4.7/font-awesome.css">
+    <link rel="stylesheet" href="../css/font-awesome/5.12.1/all.css">
+    <style>
+        .login-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+        .login-page .card {
+            padding: 20px;
+        }
+        .login-content {
+            display: flex;
+        }
+        .login-box {
+            width: 400px;
+        }
+        .register-box {
+            text-align: center;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img class="admin-avatar rounded-circle" src="../img/admin-avatar.jpg" alt="admin-avatar">
+            <div class="ml-3 admin-info">
+                Alice <br>
+                <i class="fa fa-circle text-green"></i> Online
+            </div>
+        </div>
+        <ul class="list-unstyled components">
+            <li class="">
+                <a href="../index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="#layout" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="far fa-gem"></i>
+                    <span>Layouts</span>
+                </a>
+                <ul class="collapse list-unstyled" id="layout">
+                    <li>
+                        <a href="top-navigation.html">
+                            <i class="far fa-circle mr-2"></i>
+                            <span>Top Navigation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="boxed.html"><i class="far fa-circle mr-2"></i> Boxed</a>
+                    </li>
+                    <li>
+                        <a href="fixed.html"><i class="far fa-circle mr-2"></i> Fixed</a>
+                    </li>
+                    <li>
+                        <a href="collapsed-sidebar.html"><i class="far fa-circle mr-2"></i>
+                            Collapsed Sidebar</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#ui" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-laptop"></i>
+                    UI Elements
+                </a>
+                <ul class="collapse list-unstyled" id="ui">
+                    <li>
+                        <a href="colors.html"><i class="far fa-circle mr-2"></i> Colors</a>
+                    </li>
+                    <li>
+                        <a href="typography.html"><i class="far fa-circle mr-2"></i> Typography</a>
+                    </li>
+                    <li>
+                        <a href="icons.html"><i class="far fa-circle mr-2"></i> Icons</a>
+                    </li>
+                    <li>
+                        <a href="buttons.html"><i class="far fa-circle mr-2"></i> Buttons</a>
+                    </li>
+                    <li>
+                        <a href="notifications.html"><i class="far fa-circle mr-2"></i> Notifications</a>
+                    </li>
+                    <li>
+                        <a href="modals.html"><i class="far fa-circle mr-2"></i> Modals</a>
+                    </li>
+                    <li>
+                        <a href="progress-bars.html"><i class="far fa-circle mr-2"></i> Progress Bars</a>
+                    </li>
+                    <li>
+                        <a href="tabs.html"><i class="far fa-circle mr-2"></i> Tabs</a>
+                    </li>
+                    <li>
+                        <a href="sliders.html"><i class="far fa-circle mr-2"></i> Sliders</a>
+                    </li>
+                    <li>
+                        <a href="tree-views.html"><i class="far fa-circle mr-2"></i> Tree Views</a>
+                    </li>
+                    <li>
+                        <a href="netables.html"><i class="far fa-circle mr-2"></i> Nestables</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#form" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-edit"></i>
+                    Forms
+                </a>
+                <ul class="collapse list-unstyled" id="form">
+                    <li>
+                        <a href="form.html"><i class="far fa-circle mr-2"></i> Forms Elements</a>
+                    </li>
+                    <li>
+                        <a href="form-layout.html"><i class="far fa-circle mr-2"></i> Forms Layouts</a>
+                    </li>
+                    <li>
+                        <a href="form-wizard.html"><i class="far fa-circle mr-2"></i> Forms Wizard</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="cards.html">
+                    <i class="fas fa-chart-line"></i>
+                    Cards
+                </a>
+            </li>
+            <li>
+                <a href="widgets.html">
+                    <i class="fa fa-flask"></i>
+                    Widgets
+                </a>
+            </li>
+            <li>
+                <a href="#map" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-map-marked-alt"></i>
+                    Maps
+                </a>
+                <ul class="collapse list-unstyled" id="map">
+                    <li>
+                        <a href="map-googles.html"><i class="far fa-circle mr-2"></i> Google Maps</a>
+                    </li>
+                    <li>
+                        <a href="map-vector.html"><i class="far fa-circle mr-2"></i> Vector Maps</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#chart" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-chart-line"></i>
+                    Charts
+                </a>
+                <ul class="collapse list-unstyled" id="chart">
+                    <li>
+                        <a href="chart-js.html"><i class="far fa-circle mr-2"></i> Chart JS</a>
+                    </li>
+                    <li>
+                        <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Google Chart</a>
+                    </li>
+                    <li>
+                        <a href="chart-google.html"><i class="far fa-circle mr-2"></i> Inline Charts</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-table"></i>
+                    Tables
+                </a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="basic_tables.html"><i class="far fa-circle mr-2"></i> Basic Tables</a>
+                    </li>
+                    <li>
+                        <a href="data-tables.html"><i class="far fa-circle mr-2"></i> Data Tables</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#extra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-dungeon"></i>
+                    Extra
+                </a>
+                <ul class="collapse list-unstyled" id="extra">
+                    <li>
+                        <a href="extra-invoice.html"><i class="far fa-circle mr-2"></i> Invoice</a>
+                    </li>
+                    <li>
+                        <a href="extra-404.html"><i class="far fa-circle mr-2"></i> 404 Page</a>
+                    </li>
+                    <li>
+                        <a href="extra-500.html"><i class="far fa-circle mr-2"></i> 500 Page</a>
+                    </li>
+                    <li>
+                        <a href="extra-blank.html"><i class="far fa-circle mr-2"></i> Blank Page</a>
+                    </li>
+                    <li>
+                        <a href="extra-login.html"><i class="far fa-circle mr-2"></i> Login</a>
+                    </li>
+                    <li>
+                        <a href="extra-register.html"><i class="far fa-circle mr-2"></i> Register</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menus" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fa fa-sitemap"></i>
+                    Menu
+                </a>
+                <ul class="collapse list-unstyled" id="menus">
+                    <li>
+                        <a href="menu-lv1.html"><i class="far fa-circle mr-2"></i> Level 1</a>
+                    </li>
+                    <li>
+                        <a href="menu-lv2.html"><i class="far fa-circle mr-2"></i> Level 2 & Sub</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--    Page Content-->
+    <div id="content" class="gray-bg">
+        <!--        Top Header-->
+        <nav class="navbar navbar-light bg-light navbar-static-top">
+            <div class="navbar-left">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                </button>
+            </div>
+        </nav>
+        <!--Main Content-->
+        <div class="wrapper-content">
+            <div class="container-fluid login-page">
+                <div class="login-content">
+                    <div class="card-group">
+                        <div class="card login-box">
+                            <div class="card-body">
+                                <h1 class="text-center pb-4">My Bootstrap</h1>
+                                <p>
+                                    Sign In to your account
+                                </p>
+                                <form action="">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend3">
+                                                <i class="fa fa-user-circle"></i>
+                                            </span>
+                                            </div>
+                                            <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="validationServerUsername"
+                                                    aria-describedby="inputGroupPrepend3"
+                                                    placeholder="Username"
+                                                    required
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">
+                                                <i class="fa fa-lock"></i>
+                                            </span>
+                                            </div>
+                                            <input
+                                                type="password"
+                                                class="form-control"
+                                                id="password"
+                                                aria-describedby="inputGroupPrepend"
+                                                placeholder="Username"
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card register-box bg-warning">
+                            <div class="card-body">
+                                <h2>Sign up</h2>
+                                <p class="mt-4">
+                                    Create new account today to reap the benefits of a personalized Website experience.
+                                </p>
+                                <a href="./extra-register.html" class="btn btn-lg btn-outline-primary mt-4">
+                                    Register Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="../js/bootstrap/4.4.1/bootstrap.min.js"></script>
+<script src="../js/app.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    });
+</script>
+</html>
