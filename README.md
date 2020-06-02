@@ -1,8 +1,6 @@
-# gulp-template-html
+# gulp-admin-template
 
 [![NPM Version](https://img.shields.io/npm/v/gulp-template-html.svg)](https://www.npmjs.com/package/gulp-template-html)
-[![Build Status](https://img.shields.io/travis/grit96/gulp-template-html.svg)](https://travis-ci.org/grit96/gulp-template-html)
-[![Dependency Status](https://img.shields.io/david/grit96/gulp-template-html.svg)](https://david-dm.org/grit96/gulp-template-html)
 
 Gulp plugin uses [template-html](https://github.com/grit96/template-html) to generate static HTML files from templates and content files.
 
@@ -10,28 +8,19 @@ Gulp plugin uses [template-html](https://github.com/grit96/template-html) to gen
 ## Installation
 
 ```sh
-$ npm install gulp-template-html
+$ npm install
 ```
 
 
-## Gulpfile
+## gulp task
 
 ```javascript
-var gulp = require('gulp'),
-    template = require('gulp-template-html');
+$ gulp
 
-gulp.task('default', function () {
-    return gulp.src('content/*.html')
-      .pipe(template('templates/template.html'))
-      .pipe(gulp.dest('dist'));
-});
+$ gulp sass
+
+$ gulp sass:watch
 ```
-
-
-## Example Usage
-
-See the [examples](./examples) directory for an example of how to generate static HTML files from a template.
-
 
 ## How to contribute
 
