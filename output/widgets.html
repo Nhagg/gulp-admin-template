@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Bootstrap</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap/4.4.1/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/variable.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/font-awesome-5.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
   <!-- build:css -->
 </head>
 <body>
@@ -123,7 +125,7 @@
       </li>
       <li>
         <a href="#map" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-          <i class="fa fa-map-marked-alt"></i>
+          <i class="fa fa-map-marked"></i>
           Maps
         </a>
         <ul class="collapse list-unstyled" id="map">
@@ -168,7 +170,7 @@
       </li>
       <li>
         <a href="#extra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-          <i class="fa fa-dungeon"></i>
+          <i class="fa fa-copy"></i>
           Extra
         </a>
         <ul class="collapse list-unstyled" id="extra">
@@ -294,14 +296,132 @@
     </nav>
     <!--Main Content-->
     <div class="wrapper-content">
-      <!-- build:content -->
+      
+<h1> Widgets </h1>
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-primary"><i class="fa fa-4x fa-envelope-o"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Messages</span>
+                <span class="info-box-number">1,410</span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-success"><i class="fa fa-4x fa-flag-o"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Bookmarks</span>
+                <span class="info-box-number">410</span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-warning"><i class="fa fa-4x fa-files-o"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Uploads</span>
+                <span class="info-box-number">13,648</span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-danger"><i class="fa fa-4x fa-star-o"></i></span>
+
+            <div class="info-box-content">
+                <span class="info-box-text">Likes</span>
+                <span class="info-box-number">93,139</span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+</div>
+<div class="row mt-4">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-primary-light"><i class="fa fa-4x fa-bookmark-o"></i></span>
+
+            <div class="info-box-content bg-primary">
+                <span class="info-box-text">Bookmarks</span>
+                <span class="info-box-number">41,410</span>
+                <hr>
+                <span class="progress-description">
+                                70% Increase in 30 Days
+                              </span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-success-light"><i class="fa fa-4x fa-thumbs-o-up"></i></span>
+
+            <div class="info-box-content bg-success">
+                <span class="info-box-text">Likes</span>
+                <span class="info-box-number">41,410</span>
+                <hr>
+                <span class="progress-description">
+                                70% Increase in 30 Days
+                            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-warning-light"><i class="fa fa-4x fa-calendar"></i></span>
+
+            <div class="info-box-content bg-warning">
+                <span class="info-box-text">Events</span>
+                <span class="info-box-number">41,410</span>
+                <hr>
+                <span class="progress-description">
+                                70% Increase in 30 Days
+                            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box bg-red">
+            <span class="info-box-icon bg-danger-light"><i class="fa fa-4x fa-comments-o"></i></span>
+
+            <div class="info-box-content bg-danger">
+                <span class="info-box-text">Comments</span>
+                <span class="info-box-number">41,410</span>
+
+                <hr>
+                <span class="progress-description">
+                                70% Increase in 30 Days
+                            </span>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
   </div>
 </div>
 </body>
 <script src="js/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="js/bootstrap/4.4.1/bootstrap.min.js"></script>
-<script src="js/font-awesome/5.12.1/all.min.js"></script>
+<!--<script src="js/font-awesome/5.12.1/all.min.js"></script>-->
 <script src="js/chart-js/2.9.3/util.js"></script>
 <script src="js/app.js"></script>
 <!-- build:js -->

@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Bootstrap</title><link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap/4.4.1/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/variable.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/font-awesome-5.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
   <!-- build:css -->
 </head>
 <body>
@@ -123,7 +125,7 @@
       </li>
       <li>
         <a href="#map" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-          <i class="fa fa-map-marked-alt"></i>
+          <i class="fa fa-map-marked"></i>
           Maps
         </a>
         <ul class="collapse list-unstyled" id="map">
@@ -168,7 +170,7 @@
       </li>
       <li>
         <a href="#extra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-          <i class="fa fa-dungeon"></i>
+          <i class="fa fa-copy"></i>
           Extra
         </a>
         <ul class="collapse list-unstyled" id="extra">
@@ -294,14 +296,43 @@
     </nav>
     <!--Main Content-->
     <div class="wrapper-content">
-      <!-- build:content -->
+      
+<section class="content mt-5">
+    <div class="container-fluid error-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 error-box">
+                    <h2 class="headline text-danger"> 500 </h2>
+                    <div class="error-content">
+                        <h3>
+                            <i class="fa fa-warning text-danger"></i> Oops! Something went wrong.
+                        </h3>
+                        <p>
+                            We could not find the page you were looking for.
+                            Meanwhile, you may <a href="../index.html">return to Home</a> or try using the search form.
+                        </p>
+                        <form class="search-form">
+                            <div class="input-group">
+                                <input type="text" name="search" class="form-control" placeholder="Search">
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-danger"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     </div>
   </div>
 </div>
 </body>
 <script src="js/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="js/bootstrap/4.4.1/bootstrap.min.js"></script>
-<script src="js/font-awesome/5.12.1/all.min.js"></script>
+<!--<script src="js/font-awesome/5.12.1/all.min.js"></script>-->
 <script src="js/chart-js/2.9.3/util.js"></script>
 <script src="js/app.js"></script>
 <!-- build:js -->
