@@ -15,9 +15,12 @@ gulp.task('sass', function () {
             .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest('output/css'))
     ),
-        gulp.src('sass/bootstrap/bootstrap.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(gulp.dest('output/css'));
+    gulp.src('sass/bootstrap/bootstrap.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('output/css')),
+    gulp.src('sass/bootstrap/bootstrap_dark.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('output/css'));
 });
 
 gulp.task('sass:watch', function () {
