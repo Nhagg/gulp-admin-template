@@ -9,20 +9,22 @@ gulp.task('default', function () {
 
 var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+const browserSync = require('browser-sync').create();
 gulp.task('sass', function () {
-    return gulpMerge(
-        gulp.src('sass/*.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(gulp.dest('output/css'))
-    ),
-    gulp.src('sass/bootstrap/bootstrap.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('output/css')),
-    gulp.src('sass/bootstrap/bootstrap_dark.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('output/css'));
+    return gulp.src('sass/*.scss')
+      .pipe(sass().on('error',sass.logError))
+      .pipe(gulp.dest('output/css'))
+      .pipe(browserSync.stream());
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('sass/*.scss', ['sass']);
+    browserSync.init({
+        server: {
+            baseDir: "./output",
+            index: "/index.html"
+        }
+    });
+    gulp.watch('sass/*.scss', sass)
+    // gulp.watch('./*.html').on('change',browserSync.reload);
+    // gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 });
